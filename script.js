@@ -33,7 +33,7 @@ const activeChange = function () {
 btnRoll.addEventListener('click', function () {
   if (playing) {
     let ranNumber = Math.trunc(Math.random() * 6) + 1;
-    console.log(ranNumber);
+    // console.log(ranNumber);
     diceEl.classList.remove('hidden');
     diceEl.src = `dice-${ranNumber}.png`;
 
@@ -54,7 +54,7 @@ btnHold.addEventListener('click', function () {
     currentScore = 0;
     document.getElementById(`score--${activePlayer}`).textContent =
       score[activePlayer];
-    if (score[activePlayer] >= 20) {
+    if (score[activePlayer] >= 50) {
       playing = false;
       diceEl.classList.add('hidden');
       document
